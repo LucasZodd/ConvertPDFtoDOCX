@@ -10,7 +10,9 @@ for _,_, arquivos in os.walk('pdf'):
             cv = Converter(f'pdf/{arquivo}')
             cv.convert(f'precisaConverter/{novoArquivo}'+'.docx', start=0, end=None)
             cv.close()
-            print(arquivo)
+            print("arquivo convertido: ", arquivo)
         except:
             print("Erro arquivo: ", arquivo)
             pass
+
+print("Fim")
