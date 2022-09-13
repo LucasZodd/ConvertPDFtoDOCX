@@ -12,7 +12,10 @@ for _,_, arquivos in os.walk('pdf'):
             cv.close()
             print("arquivo convertido: ", arquivo)
         except:
-            print("Erro arquivo: ", arquivo)
+            print("Erro ao converter arquivo: ", arquivo)
+            o = open(arquivo + '.txt', "a")
+            o.write(arquivo)
+            o.close()
             pass
 
 print("Fim")
